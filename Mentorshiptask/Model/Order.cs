@@ -8,7 +8,7 @@ namespace Mentorshiptask.Model;
 public class Order
 {
     public Guid Id { get; set; }
-    public Guid ProductId { get; set; } // Change to Guid to match Product's primary key
+    public Guid ProductId { get; set; } 
     public string StrCustomerName { get; set; }
     [Precision(18, 2)]
     public decimal NumQuantity { get; set; }

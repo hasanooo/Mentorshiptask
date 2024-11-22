@@ -12,14 +12,14 @@ public class dbERPContext : DbContext
    
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        // One-to-Many: Product has many Orders
+        
         modelBuilder.Entity<Order>()
             .HasOne(o => o.Product)
             .WithMany(p => p.Orders)
-            .HasForeignKey(o => o.ProductId) // Use Guid for foreign key
-            .OnDelete(DeleteBehavior.Cascade); // Adjust delete behavior as needed
+            .HasForeignKey(o => o.ProductId) 
+            .OnDelete(DeleteBehavior.Cascade); 
 
-        // Optional: Set table names if needed
+       
         modelBuilder.Entity<Product>().ToTable("Products");
         modelBuilder.Entity<Order>().ToTable("Orders");
 

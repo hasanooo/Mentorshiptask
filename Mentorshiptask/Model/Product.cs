@@ -10,6 +10,6 @@ public class Product
     [Precision(18, 2)]
     public decimal NumStock { get; set; }
 
-    // Navigation property for related Orders
+   
     public ICollection<Order> Orders { get; set; } = new List<Order>();
 }
