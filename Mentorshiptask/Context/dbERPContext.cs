@@ -8,8 +8,8 @@ public class dbERPContext : DbContext
 
     public DbSet<Product> TblProducts { get; set; }
     public DbSet<Order> TblOrders { get; set; }
+    public DbSet<User> Users { get; set; }
 
-   
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         
@@ -22,6 +22,7 @@ public class dbERPContext : DbContext
        
         modelBuilder.Entity<Product>().ToTable("Products");
         modelBuilder.Entity<Order>().ToTable("Orders");
+        //modelBuilder.Entity<User>().ToTable("Users");
 
         //  modelBuilder.Entity<Product>().HasData(
         //    new Product
